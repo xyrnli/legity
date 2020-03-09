@@ -1,0 +1,21 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "strict": true,
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "sourceMap": false,
+    "declaration": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false
+  },
+  "exclude": [
+    "./dist"
+  ]
+}
