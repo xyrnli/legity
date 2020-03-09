@@ -1,0 +1,51 @@
+{
+  "name": "legity",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Simple JavaScript library for data validation",
+  "keywords": [
+    "legity",
+    "validator"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/xyrnli/legity#readme",
+  "bugs": {
+    "url": "https://github.com/xyrnli/legity/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xyrnli/legity.git"
+  },
+  "license": "UNLICENSED",
+  "author": "Ilya Smirnov (xyrnli)",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "eslint": "eslint \"./src/**/*.ts\"",
+    "eslint:fix": "eslint \"./src/**/*.ts\" --fix",
+    "test": "jest",
+    "watch": "tsc --watch",
+    "prepublish": "npm run build & npm run eslint & npm run test"
+  },
+  "lint-staged": {
+    "./src/**/*.ts": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.3",
+    "@types/node": "^13.7.6",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.1",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.7",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.7.5"
+  }
+}
